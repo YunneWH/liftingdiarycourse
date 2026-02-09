@@ -2,6 +2,12 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Documentation-First Rule
+
+**ALWAYS** consult the relevant docs file(s) in the `/docs` directory before generating any code. The docs contain project-specific requirements, patterns, and conventions that must be followed. If a docs file covers the area you are working on, treat its contents as the source of truth for implementation decisions.cl
+
+- /docs/ui.md
+
 ## Project Overview
 
 Next.js 16 web application with TypeScript and Tailwind CSS 4. Uses the App Router pattern with source files in `src/app/`.
