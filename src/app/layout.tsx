@@ -38,8 +38,8 @@ export default function RootLayout({
         >
           <header>
             <SignedOut>
-              <SignInButton />
-              <SignUpButton />
+              <SignInButton mode="modal" />
+              <SignUpButton mode="modal" />
             </SignedOut>
             <SignedIn>
               <UserButton />
