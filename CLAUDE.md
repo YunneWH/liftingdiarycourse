@@ -4,22 +4,25 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Next.js 16 web application with TypeScript and Tailwind CSS 4. Uses the App Router pattern with source files in `src/app/`.
+This is a Next.js 15.5.3 application with TypeScript and Tailwind CSS v4, using the App Router architecture with Turbopack enabled for both development and production builds.
 
 ## Commands
 
-- `npm run dev` — Start development server (http://localhost:3000)
-- `npm run build` — Production build
-- `npm start` — Start production server
-- `npm run lint` — Run ESLint
+- `npm run dev` - Start development server with Turbopack
+- `npm run build` - Build for production with Turbopack
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
 
-No test framework is currently configured.
+## Code Generation Guidelines
+
+**IMPORTANT**: When generating any code, ALWAYS first refer to the relevant documentation files within the `/docs` directory to understand existing patterns, conventions, and best practices before implementation:
+
+- /docs/ui.md
+- /docs/data-fetching.md
 
 ## Architecture
 
-- **App Router**: File-based routing in `src/app/` with React Server Components by default
-- **Styling**: Tailwind CSS 4 via PostCSS; light/dark mode via `prefers-color-scheme` CSS variables in `globals.css`
-- **Fonts**: Geist font family loaded via `next/font`
-- **Path aliases**: `@/*` maps to `./src/*`
-- **TypeScript**: Strict mode enabled
-- **ESLint**: Flat config (v9) extending Next.js core web vitals and TypeScript rules
+- **App Router**: Located at `src/app/` with `layout.tsx` and `page.tsx` files
+- **Styling**: Tailwind CSS v4 with PostCSS configuration
+- **Path Alias**: `@/*` maps to `./src/*` for cleaner imports
+- **Font System**: Uses Geist fonts configured in the root layout
